@@ -1,0 +1,25 @@
+header {
+   max-height: 250px;
+   
+   .navbar {
+    padding: 0;
+    
+    .container-fluid {
+        background-color: black;
+        
+ .navbar-toggler {
+        color: white !important;
+        border-color: white !important;
+    }
+    img {
+    height : 200px;
+   }
+   .navbar-nav .nav-link {
+    color: white;
+    font-size: 22px;
+   }
+   .navbar-nav:hover .nav-link:hover {
+    color: $yellow;
+   }
+}}
+}

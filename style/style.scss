@@ -1,0 +1,137 @@
+@import 'variables.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+body {
+    h1, h2 {
+        font-family: 'Kalam', cursive;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p, li {
+        font-family: 'Lora', serif;
+    }
+    
+}
+// About Me
+#about-me {
+ margin: 30px 100px;
+ img {
+    width: 40%;
+    border-radius: 50%;
+ }
+ #text-apropos {
+    width: 60%;
+    a {
+        text-decoration: none;
+        color: $yellow;
+        font-weight: 700;
+    }
+    a:hover {
+        font-size: 24px;
+    }
+ }
+ .cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: $yellow;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Lora", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: $black;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: $black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: $yellow;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  
+}
+
+// Compétences
+#competences img {
+    width: 600px;
+}
+
+#technologies {
+    background-color: $yellow;
+    min-height: 400px;
+    #technologies-container {
+        width: 600px;
+    }
+        i, p {
+            font-size: 18px;
+        }
+    }
+
+p {
+    font-size: 20px;
+}
+ 
+i {
+    font-size: 22px;
+}
+
+#contact {
+    background-color: $yellow;
+    min-height: 160px;
+    #contact-container {
+        
+        width: 80%;
+        margin-bottom: 60px;
+    }
+
+.contact-box {
+    width: 30%;
+    i {
+        font-size: 36px;
+        color: $black;
+    }
+}
+}

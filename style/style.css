@@ -1,0 +1,155 @@
+/* Color */
+header {
+  max-height: 250px;
+}
+header .navbar {
+  padding: 0;
+}
+header .navbar .container-fluid {
+  background-color: black;
+}
+header .navbar .container-fluid .navbar-toggler {
+  color: white !important;
+  border-color: white !important;
+}
+header .navbar .container-fluid img {
+  height: 200px;
+}
+header .navbar .container-fluid .navbar-nav .nav-link {
+  color: white;
+  font-size: 22px;
+}
+header .navbar .container-fluid .navbar-nav:hover .nav-link:hover {
+  color: #ffd60a;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  min-height: 20px;
+}
+footer p {
+  margin: 0;
+  font-size: 15px;
+}
+
+body h1, body h2 {
+  font-family: "Kalam", cursive;
+}
+body h1 {
+  font-size: 60px;
+}
+body h2 {
+  font-size: 40px;
+}
+body p, body li {
+  font-family: "Lora", serif;
+}
+
+#about-me {
+  margin: 30px 100px;
+}
+#about-me img {
+  width: 40%;
+  border-radius: 50%;
+}
+#about-me #text-apropos {
+  width: 60%;
+}
+#about-me #text-apropos a {
+  text-decoration: none;
+  color: #ffd60a;
+  font-weight: 700;
+}
+#about-me #text-apropos a:hover {
+  font-size: 24px;
+}
+#about-me .cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+#about-me .cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #ffd60a;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+#about-me .cta span {
+  position: relative;
+  font-family: "Lora", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+#about-me .cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #000;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+#about-me .cta:hover:before {
+  width: 100%;
+  background: #ffd60a;
+}
+#about-me .cta:hover svg {
+  transform: translateX(0);
+}
+#about-me .cta:active {
+  transform: scale(0.95);
+}
+
+#competences img {
+  width: 600px;
+}
+
+#technologies {
+  background-color: #ffd60a;
+  min-height: 400px;
+}
+#technologies #technologies-container {
+  width: 600px;
+}
+#technologies i, #technologies p {
+  font-size: 18px;
+}
+
+p {
+  font-size: 20px;
+}
+
+i {
+  font-size: 22px;
+}
+
+#contact {
+  background-color: #ffd60a;
+  min-height: 160px;
+}
+#contact #contact-container {
+  width: 80%;
+  margin-bottom: 60px;
+}
+#contact .contact-box {
+  width: 30%;
+}
+#contact .contact-box i {
+  font-size: 36px;
+  color: #000;
+}/*# sourceMappingURL=style.css.map */
