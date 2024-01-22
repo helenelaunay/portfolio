@@ -1,5 +1,5 @@
 header {
-   max-height: 250px;
+   max-height: 150px;
    
    .navbar {
     padding: 0;
@@ -12,7 +12,8 @@ header {
         border-color: white !important;
     }
     img {
-    height : 200px;
+    height : 130px;
+    margin-left: 50px;
    }
    .navbar-nav .nav-link {
     color: white;

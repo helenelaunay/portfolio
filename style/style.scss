@@ -14,6 +14,7 @@ body {
     }
     p, li {
         font-family: 'Lora', serif;
+        font-size: 18px;
     }
     
 }
@@ -95,34 +96,183 @@ body {
 }
 
 // Compétences
-#competences img {
+#competences-technologies {
+    .card {
+      width: 140px;
+      height: 60px;
+      perspective: 1000px;
+      border-color: $white;
+    }
+    
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.999s;
+    }
+    
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    
+    .card-front {
+      background-color: $yellow;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      border: 10px solid $yellow;
+      border-radius: 10px;
+      justify-content: center;
+      font-size: 20px;
+      transform: rotateY(0deg);
+      i {
+        font-size: 30px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    
+    .card-back {
+      background-color: $white;
+      color: $yellow;
+      display: flex;
+      align-items: center;
+      border: 2px solid $yellow;
+      border-radius: 10px;
+      justify-content: center;
+      font-size: 20px;
+      transform: rotateY(180deg);
+      p {
+        margin-bottom: 0;
+      }
+    }
+    
+      
+
+img {
     width: 600px;
 }
+} 
 
-#technologies {
-    background-color: $yellow;
-    min-height: 400px;
-    #technologies-container {
-        width: 600px;
-    }
-        i, p {
-            font-size: 18px;
+#portfolio {
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 1fr) 1fr;
+    grid-template-rows: repeat(3, 150px) 100px 50px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    
+      .div1 { grid-area: 1 / 2 / 2 / 4; 
+      p {
+        text-align: end;
+        padding-right: 10px;
+      }}
+      .div2 { grid-area: 2 / 2 / 5 / 4;
+        position: relative;
+        display: inline-block;
+        img {
+          object-fit: cover;
+          display: block;
+          max-width: 100%;
+          height: auto;
+        } 
+        .text-hover {
+          position: absolute;
+          top: 30%;
+          width: 100%;
+          opacity: 0;
+          text-align: center;
+          transition: opacity 0.3s ease-in-out;
+          font-weight: 600;
+          font-size: 18px;
+          text-decoration: none;
+          color: $black;
+        }}
+        .div2:hover {
+          img {
+            opacity: 0.5;
+          }
+          .text-hover {
+            opacity: 1;
+          }  
+          }
+      .div3 { grid-area: 1 / 4 / 3 / 6;
+        position: relative;
+        display: inline-block;
+        img {
+          object-fit: cover;
+          display: block;
+          max-width: 100%;
+          height: auto;
+        } 
+        .text-hover {
+          position: absolute;
+          top: 30%;
+          width: 100%;
+          opacity: 0;
+          text-align: center;
+          transition: opacity 0.3s ease-in-out;
+          font-weight: 600;
+          font-size: 18px;
+          text-decoration: none;
+          color: $black;
+        }}
+        .div3:hover {
+          img {
+            opacity: 0.5;
+          }
+          .text-hover {
+            opacity: 1;
+          }  
+          }
+        
+      .div4 { grid-area: 3 / 4 / 5 / 6; 
+        position: relative;
+        display: inline-block;
+        img {
+          object-fit: cover;
+          display: block;
+          max-width: 100%;
+          height: auto;
+        } 
+        .text-hover {
+          position: absolute;
+          top: 30%;
+          width: 100%;
+          opacity: 0;
+          text-align: center;
+          transition: opacity 0.3s ease-in-out;
+          font-weight: 600;
+          font-size: 18px;
+          text-decoration: none;
+          color: $black;
+        }}
+        .div4:hover {
+          img {
+            opacity: 0.5;
+          }
+          .text-hover {
+            opacity: 1;
+          }  
+          }
         }
-    }
-
-p {
-    font-size: 20px;
-}
- 
-i {
-    font-size: 22px;
-}
+      }
+    
 
 #contact {
     background-color: $yellow;
-    min-height: 160px;
+    height:140px;
     #contact-container {
-        
         width: 80%;
         margin-bottom: 60px;
     }

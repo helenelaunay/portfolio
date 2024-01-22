@@ -1,6 +1,6 @@
 /* Color */
 header {
-  max-height: 250px;
+  max-height: 150px;
 }
 header .navbar {
   padding: 0;
@@ -13,7 +13,8 @@ header .navbar .container-fluid .navbar-toggler {
   border-color: white !important;
 }
 header .navbar .container-fluid img {
-  height: 200px;
+  height: 130px;
+  margin-left: 50px;
 }
 header .navbar .container-fluid .navbar-nav .nav-link {
   color: white;
@@ -44,6 +45,7 @@ body h2 {
 }
 body p, body li {
   font-family: "Lora", serif;
+  font-size: 18px;
 }
 
 #about-me {
@@ -115,32 +117,172 @@ body p, body li {
   transform: scale(0.95);
 }
 
-#competences img {
-  width: 600px;
+#competences-technologies .card {
+  width: 140px;
+  height: 60px;
+  perspective: 1000px;
+  border-color: #fff;
 }
-
-#technologies {
+#competences-technologies .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+#competences-technologies .card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+#competences-technologies .card-front,
+#competences-technologies .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+#competences-technologies .card-front {
   background-color: #ffd60a;
-  min-height: 400px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #ffd60a;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 20px;
+  transform: rotateY(0deg);
 }
-#technologies #technologies-container {
+#competences-technologies .card-front i {
+  font-size: 30px;
+}
+#competences-technologies .card-front p {
+  font-size: 16px;
+}
+#competences-technologies .card-back {
+  background-color: #fff;
+  color: #ffd60a;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ffd60a;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 20px;
+  transform: rotateY(180deg);
+}
+#competences-technologies .card-back p {
+  margin-bottom: 0;
+}
+#competences-technologies img {
   width: 600px;
 }
-#technologies i, #technologies p {
+
+#portfolio .portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr) 1fr;
+  grid-template-rows: repeat(3, 150px) 100px 50px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+#portfolio .portfolio-grid .div1 {
+  grid-area: 1/2/2/4;
+}
+#portfolio .portfolio-grid .div1 p {
+  text-align: end;
+  padding-right: 10px;
+}
+#portfolio .portfolio-grid .div2 {
+  grid-area: 2/2/5/4;
+  position: relative;
+  display: inline-block;
+}
+#portfolio .portfolio-grid .div2 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#portfolio .portfolio-grid .div2 .text-hover {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+  font-weight: 600;
   font-size: 18px;
+  text-decoration: none;
+  color: #000;
 }
-
-p {
-  font-size: 20px;
+#portfolio .portfolio-grid .div2:hover img {
+  opacity: 0.5;
 }
-
-i {
-  font-size: 22px;
+#portfolio .portfolio-grid .div2:hover .text-hover {
+  opacity: 1;
+}
+#portfolio .portfolio-grid .div3 {
+  grid-area: 1/4/3/6;
+  position: relative;
+  display: inline-block;
+}
+#portfolio .portfolio-grid .div3 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#portfolio .portfolio-grid .div3 .text-hover {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+#portfolio .portfolio-grid .div3:hover img {
+  opacity: 0.5;
+}
+#portfolio .portfolio-grid .div3:hover .text-hover {
+  opacity: 1;
+}
+#portfolio .portfolio-grid .div4 {
+  grid-area: 3/4/5/6;
+  position: relative;
+  display: inline-block;
+}
+#portfolio .portfolio-grid .div4 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#portfolio .portfolio-grid .div4 .text-hover {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+#portfolio .portfolio-grid .div4:hover img {
+  opacity: 0.5;
+}
+#portfolio .portfolio-grid .div4:hover .text-hover {
+  opacity: 1;
 }
 
 #contact {
   background-color: #ffd60a;
-  min-height: 160px;
+  height: 140px;
 }
 #contact #contact-container {
   width: 80%;
